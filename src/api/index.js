@@ -7,3 +7,84 @@ export function getCategoryList(params) {
 		params
 	})
 }
+
+export function getCategory(id) {
+	return axios({
+		url: '/category',
+		method: 'GET',
+		params: {
+			id
+		}
+	})
+}
+
+export function saveCategory(data) {
+	return axios({
+		url: '/category',
+		method: 'POST',
+		data
+	})
+}
+
+export function updateCategory(data) {
+	return axios({
+		url: '/category',
+		method: 'PUT',
+		data
+	})
+}
+
+export function deleteCategory(id) {
+	return axios({
+		url: '/category',
+		method: 'delete',
+		params: {
+			id
+		}
+	})
+}
+
+export function getPropertyByCid(cid) {
+	return axios({
+		url: '/propertyList',
+		method: 'GET',
+		params: {
+			cid
+		}
+	})
+}
+
+export function addProperty(data) {
+	return axios({
+		url: '/property',
+		method: 'POST',
+		data
+	})
+}
+export function updateProperty(data) {
+	return axios({
+		url: '/property',
+		method: 'PUT',
+		data
+	})
+}
+
+export function getPropertyById(id) {
+	return axios({
+		url: '/property-id',
+		method: 'GET',
+		params: {
+			id
+		}
+	})
+}
+
+export function deletePropertyById(id) {
+	return axios({
+		url: '/property',
+		method: 'DELETE',
+		params: {
+			id
+		}
+	})
+}

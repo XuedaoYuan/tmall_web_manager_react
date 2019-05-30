@@ -5,6 +5,7 @@ import './App.css'
 import { Menu, Icon } from 'antd'
 import Category from './pages/Category'
 import User from './pages/User'
+import Property from './pages/Property'
 
 class App extends React.Component {
 	state = {
@@ -36,7 +37,7 @@ class App extends React.Component {
 					<Switch>
 						<Route exact={true} path={'/'} component={Category} />
 						<Route path={'/user'} component={User} />
-						{/* <Route path={'/test'} component={Test} /> */}
+						<Route path={'/property/:cid'} component={Property} />
 					</Switch>
 				</div>
 			</div>
