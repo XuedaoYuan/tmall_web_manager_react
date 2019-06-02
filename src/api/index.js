@@ -88,3 +88,75 @@ export function deletePropertyById(id) {
 		}
 	})
 }
+
+export function getProductByCid(cid) {
+	return axios({
+		url: '/product-cid',
+		method: 'GET',
+		params: {
+			cid
+		}
+	})
+}
+
+export function addProduct(data) {
+	return axios({
+		url: '/product',
+		method: 'POST',
+		data
+	})
+}
+
+export function updateProduct(data) {
+	return axios({
+		url: '/product',
+		method: 'PUT',
+		data
+	})
+}
+
+export function deleteProduct(id) {
+	return axios({
+		url: '/product',
+		method: 'DELETE',
+		params: {
+			id
+		}
+	})
+}
+
+export function getProductImagesByPid(pid) {
+	return axios({
+		url: '/productimage-pid',
+		method: 'GET',
+		params: {
+			pid
+		}
+	})
+}
+
+export function addProductimage(data) {
+	return axios({
+		url: '/productimage',
+		method: 'POST',
+		data
+	})
+}
+
+export function updateProductimage(data) {
+	return axios({
+		url: '/productimage',
+		method: 'PUT',
+		data
+	})
+}
+
+export function deleteProductimage(id) {
+	return axios({
+		url: '/productimage',
+		method: 'DELETE',
+		params: {
+			id
+		}
+	})
+}

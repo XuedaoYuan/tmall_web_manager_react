@@ -6,6 +6,8 @@ import { Menu, Icon } from 'antd'
 import Category from './pages/Category'
 import User from './pages/User'
 import Property from './pages/Property'
+import Product from './pages/Product'
+import ProductImage from "./pages/ProductImage"
 
 class App extends React.Component {
 	state = {
@@ -38,6 +40,8 @@ class App extends React.Component {
 						<Route exact={true} path={'/'} component={Category} />
 						<Route path={'/user'} component={User} />
 						<Route path={'/property/:cid'} component={Property} />
+						<Route path={'/product/:cid'} component={Product} />
+						<Route path={'/productimage/:pid'} component={ProductImage} />
 					</Switch>
 				</div>
 			</div>

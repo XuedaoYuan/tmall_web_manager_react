@@ -34,6 +34,9 @@ class Category extends Component {
 	handleEditProperty = record => {
 		this.props.history.push('/property/' + record.id)
 	}
+	handleEditProduct = record => {
+		this.props.history.push('/product/' + record.id)
+	}
 	handleDelete = record => {
 		deleteCategory(record.id).then(res => {
 			if (res.success) {
@@ -174,6 +177,10 @@ class Category extends Component {
 									<Divider type="vertical" />
 									<Button type="primary" onClick={this.handleEditProperty.bind(this, record)}>
 										编辑属性
+									</Button>
+									<Divider type="vertical" />
+									<Button type="primary" onClick={this.handleEditProduct.bind(this, record)}>
+										编辑产品
 									</Button>
 									<Divider type="vertical" />
 									<Button type="danger" onClick={this.handleDelete.bind(this, record)}>
