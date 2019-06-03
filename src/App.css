@@ -5,6 +5,12 @@
 }
 .footer {
 	position: fixed;
-    bottom: 0px;
-    left: 0;
+	bottom: 0px;
+	left: 0;
+}
+
+input {
+	outline: none;
+	border: 1px solid #ccc;
+	padding: 3px 5px;
 }

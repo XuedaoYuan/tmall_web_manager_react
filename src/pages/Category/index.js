@@ -166,6 +166,14 @@ class Category extends Component {
 					<Column title="名称" dataIndex="name" key="name" />
 					<Column title="图片" dataIndex="imageUrl" key="imageUrl" />
 					<Column
+						title="图片预览"
+						dataIndex="imageUrl"
+						key="imageUrlView"
+						render={(text, record) => {
+							return <img width="50" height="50" alt="" src={record.imageUrl} />
+						}}
+					/>
+					<Column
 						title="操作"
 						key="action"
 						render={(text, record) => {

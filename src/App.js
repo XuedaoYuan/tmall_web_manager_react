@@ -8,6 +8,7 @@ import User from './pages/User'
 import Property from './pages/Property'
 import Product from './pages/Product'
 import ProductImage from "./pages/ProductImage"
+import PropertyValue from "./pages/PropertyValue"
 
 class App extends React.Component {
 	state = {
@@ -42,6 +43,7 @@ class App extends React.Component {
 						<Route path={'/property/:cid'} component={Property} />
 						<Route path={'/product/:cid'} component={Product} />
 						<Route path={'/productimage/:pid'} component={ProductImage} />
+						<Route path={'/propertyvalue/:pid'} component={PropertyValue} />
 					</Switch>
 				</div>
 			</div>

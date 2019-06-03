@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { getProductByCid } from '../../api'
 import { Button, Divider, Modal, Table, Form, Input, message } from 'antd'
-import { addProduct, updateProduct, deleteProduct } from '../../api'
+import { addProduct, updateProduct, deleteProduct, getPropertyValueList } from '../../api'
 const { Column } = Table
 class Product extends Component {
 	state = {
@@ -33,6 +33,7 @@ class Product extends Component {
 		const { getFieldDecorator } = this.props.form
 		return (
 			<div>
+				<h2>产品管理</h2>
 				<div>
 					<Button type="primary" onClick={this.handleAdd}>
 						新增
@@ -64,6 +65,13 @@ class Product extends Component {
 										<Divider type="vertical" />
 										<Button type="primary" onClick={this.handleEditImage.bind(this, record)}>
 											编辑图片
+										</Button>
+										<Divider type="vertical" />
+										<Button
+											type="primary"
+											onClick={this.handleEditPropertyValue.bind(this, record)}
+										>
+											编辑属性值
 										</Button>
 										<Divider type="vertical" />
 										<Button type="danger" onClick={this.handleDelete.bind(this, record)}>
@@ -136,6 +144,12 @@ class Product extends Component {
 	}
 	handleEditImage = record => {
 		this.props.history.push('/productimage/' + record.id)
+	}
+	handleEditPropertyValue = record => {
+		this.props.history.push("/propertyvalue/" + record.id)
+		/* getPropertyValueList(record.id).then(res => {
+			console.log(res)
+		}) */
 	}
 	handleEdit = record => {
 		const { setFieldsValue } = this.props.form

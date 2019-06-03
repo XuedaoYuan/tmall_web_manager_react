@@ -160,3 +160,29 @@ export function deleteProductimage(id) {
 		}
 	})
 }
+
+export function getPropertyValueList(pid) {
+	return axios({
+		url: '/edit-pv',
+		method: 'GET',
+		params: {
+			pid
+		}
+	})
+}
+
+export function updatePropertyValue(data) {
+	return axios({
+		url: '/update-pv',
+		method: 'POST',
+		data
+	})
+}
+
+export function getUsers(params) {
+	return axios({
+		url: '/user',
+		method: 'GET',
+		params
+	})
+}

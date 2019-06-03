@@ -4,7 +4,7 @@
 import axios from 'axios'
 
 axios.defaults.timeout = 15000
-axios.defaults.retry = 3
+axios.defaults.retry = 1
 axios.defaults.retryDelay = 2000
 
 function axiosRetryInterceptor(err) {
